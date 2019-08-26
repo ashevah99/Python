@@ -23,6 +23,7 @@ print((stuff))
 def loops():
     stuff = "hello my name is sam nice to meet you".split()
     newstuff = []
+    theGoodStuff = [stuff, newstuff]
     print(stuff)
     # added in reverse
     while stuff:
@@ -44,8 +45,17 @@ def sampleInput():
         name = input("\nwhat is your name?")
         response = input("\nhow did you find your service?")
         dic[name] = response
+#       del dict[name]
         print("will keep repeating until 10 recipients have been tended to")
         print("current number: " + str(dic.__len__()))
+    for __, value in dic.items():
+        # print(key)
+        print(value)
+    # loops through sorted keys
+    for name in sorted(dic.keys()):
+        print(name)
+    for sue in dic.values():
+        print(sue)
     print(dic)
 
 
